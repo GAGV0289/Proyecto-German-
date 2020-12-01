@@ -1,0 +1,34 @@
+.texto{
+    text-align: justify;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.icono{
+    height: 64px;
+    width: 64px;
+}
+.titulos{
+    padding-left: 5%;
+    font-size: 23px;
+}
+.imagen{
+    padding-left: 20px;
+    border-radius: 15px;
+    width: 410px;
+    height: 230px;
+}
+body h4
+{
+	font-weight: 10px;
+	font-size: 16px;
+} 
+body h1{
+	font-weight: 40px;
+	font-size: 30px;
+}
+.imagen2{
+    padding-left: 20px;
+    border-radius: 15px;
+    width: 230px;
+    height: 110px;
+}
