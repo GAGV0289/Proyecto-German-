@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+}
+.grid
+{
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    align-items: center;
+}
+.content8
+{
+	width: auto;
+	height: 100%;
+	background: #fff;
+}
+
+.contenedor{
+	margin-left:10% 
+    width: 80%;
+    padding: 15px;
+}
+input[type="text"],
+input[type="password"]{
+    font-size: 20px;
+    width: 82%;
+    padding: 12px;
+    border: none;
+}
+.input-contenedor{
+    margin-bottom: 15px;
+}
+.icon{
+    min-width: 50px;
+    text-align: center;
+    color: #ff0000;
+}
+.button{
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    background: #000;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button:hover{
+    background: #808080;
+}
+.titulo_error
+{
+    color: #000;
+}
+.color
+{
+    font-size: 25px;
+    color: red;
+}
+.tienes-unacuenta
+{
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 4%;
+    font-size: 18px;
+}
+.diseño2
+{
+    margin-left: 3%;
+    margin-top: -5%;
+    width: 94%;
+    background: #000;
+    color: #fff;
+    font-size: 21px;
+    display: inline-block;
+    text-align: center;
+    padding: 14.6px 0;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.diseño2:hover
+{
+    background: #808080;
+}
+.diseño3
+{
+    margin-top: 5%;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    font-size: 21px;
+    display: inline-block;
+    text-align: center;
+    padding: 14.6px 0;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.diseño3:hover
+{
+    background: #808080;
+}
+.grid-login
+{
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    align-items: center;
+}
+.content9
+{
+    grid-column: 2/4;
+}
+.grid-cita
+{
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    align-items: center;
+}
+.content10
+{
+     grid-column: 1/-1;
+}
+
+@media(max-width: 1024px)
+{
+    .content9
+    {
+        grid-column: 1/-1;
+    }
+}
