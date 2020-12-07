@@ -7,8 +7,8 @@ $conexion = mysqli_connect("localhost", "root", "", "nwind");
 $consulta = "SELECT * FROM usuarios WHERE usuario='$usuario' AND password='$pass'";
 $resultado = mysqli_query($conexion, $consulta);
 $filas = mysqli_num_rows($resultado);
-
-if ($filas>0) {
+if ($filas>0) 
+{
 	header("location:../indexgio.php");
 }
 else
@@ -18,5 +18,4 @@ else
 }
 mysqli_free_result($resultado);
 mysqli_close($conexion);
-
 ?>
