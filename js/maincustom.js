@@ -1,4 +1,4 @@
-var url = "bd/crudcustom.php";
+var url = "../Proyecto-German-/crudcustom.php";
 
 var Customers = new Vue({    
 el: "#Customers",   
@@ -54,7 +54,7 @@ methods:{
                 }) 
         }       
         else{          
-          this.altaCustom();          
+          this.altaCustomers();          
           const Toast = Swal.mixin({
               toast: true,
               position: 'top-end',
@@ -89,7 +89,7 @@ methods:{
             Fax = document.getElementById('Fax').value,     
                               
             
-            this.editarCustom(CustomerID, CompanyName,ContactName,ContactTitle,Address,City,Region,PostalCode,Country,Phone,Fax);
+            this.editarCustomers(CustomerID, CompanyName,ContactName,ContactTitle,Address,City,Region,PostalCode,Country,Phone,Fax);
             Swal.fire(
               '¡Actualizado!',
               'El registro ha sido actualizado.',
