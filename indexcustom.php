@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
     <head>
+        <title>Crud customer</title>
     <link rel="shortcut icon" href="#" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,14 +17,10 @@
     </head>
     <body>
     <header>
-<<<<<<< HEAD
-        <h2 class="text-center text-dark"><span class="badge badge-success">CRUD con VUE.JS</span></h2>
-=======
-        <h2 class="text-center text-dark"><span class="badge badge-success">CRUD de la tabla categories</span></h2>
->>>>>>> 854ec2b3df6fdb9585021b80e6bb52234580a80b
+        <h2 class="text-center text-dark"><span class="badge badge-success">Tabla de Customers</span></h2>
     </header>    
     
-     <div id="appCategories">               
+     <div id="Customers">               
         <div class="container">                
             <div class="row">       
                 <div class="col">        
@@ -36,32 +33,37 @@
                     <table class="table table-striped">
                         <thead>
                             <tr class="bg-primary text-light">
-                                <th>CategoryID</th>                                    
-                                <th>CategoryName</th>
-<<<<<<< HEAD
-=======
-                                <th>Description</th>
->>>>>>> 854ec2b3df6fdb9585021b80e6bb52234580a80b
+                                <th>CustomerID</th>                                    
+                                <th>CompanyName</th>
+                                <th>ContactName</th>
+                                <th>ContactTitle</th>
+                                <th>Address</th>
+                                <th>City</th>
+                                <th>Region</th>
+                                <th>PostalCode</th>
+                                <th>Country</th>
+                                <th>Phone</th>
+                                <th>Fax</th>
+                                <th>Accion</th>
                             </tr>    
                         </thead>
                         <tbody>
-                            <tr v-for="(categories,indice) of categories">                                
-                                <td>{{categories.CategoryID}}</td>                                
-                                <td>{{categories.CategoryName}}</td>
-<<<<<<< HEAD
-                                
-                               
+                            <tr v-for="(customers,indice) of customers">                                
+                                <td>{{customers.CustomerID}}</td>                                
+                                <td>{{customers.CompanyName}}</td>
+                                <td>{{customers.ContactName}}</td>
+                                <td>{{customers.ContactTitle}}</td>
+                                <td>{{customers.Address}}</td>
+                                <td>{{customers.City}}</td>                               
+                                <td>{{customers.Region}}</td>
+                                <td>{{customers.PostalCode}}</td>
+                                <td>{{customers.Country}}</td>
+                                <td>{{customers.Phone}}</td>
+                                <td>{{customers.Fax}}</td>
                                 <td>
                                 <div class="btn-group" role="group">
-                                    <button class="btn btn-secondary" title="Editar" @click="btnEditar(categories.CategoryID, categories.CategoryName )"><i class="fas fa-pencil-alt"></i></button>    
-=======
-                                <td>{{categories.Description}}</td>
-                               
-                                <td>
-                                <div class="btn-group" role="group">
-                                    <button class="btn btn-secondary" title="Editar" @click="btnEditar(categories.CategoryID, categories.CategoryName, categories.Description )"><i class="fas fa-pencil-alt"></i></button>    
->>>>>>> 854ec2b3df6fdb9585021b80e6bb52234580a80b
-                                    <button class="btn btn-danger" title="Eliminar" @click="btnBorrar(categories.CategoryID)"><i class="fas fa-trash-alt"></i></button>      
+                                    <button class="btn btn-secondary" title="Editar" @click="btnEditar(customers.CustomerID, customers.CompanyName, customers.ContactName, customers.ContactTitle, customers.Address, customers.City, customers.Region, customers.PostalCode, customers.Country, customers.Phone, customers.Fax)"><i class="fas fa-pencil-alt"></i></button>    
+                                    <button class="btn btn-danger" title="Eliminar" @click="btnBorrar(customers.CustomerID)"><i class="fas fa-trash-alt"></i></button>      
 								</div>
                                 </td>
                             </tr>    
@@ -82,6 +84,7 @@
     <!--Sweet Alert 2 -->        
     <script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>      
     <!--Código custom -->          
-    <script src="mein.js"></script>         
+    <script src="../Proyecto-German-/js/maincustom.js"></script>      
+    
     </body>
 </html>
