@@ -17,7 +17,7 @@
     </head>
     <body>
     <header>
-        <h2 class="text-center text-dark"><span class="badge badge-success">CRUD con VUE.JS</span></h2>
+        <h2 class="text-center text-dark"><span class="badge badge-success">Tabla de Customers</span></h2>
     </header>    
     
      <div id="Customers">               
@@ -44,7 +44,7 @@
                                 <th>Country</th>
                                 <th>Phone</th>
                                 <th>Fax</th>
-
+                                <th>Accion</th>
                             </tr>    
                         </thead>
                         <tbody>
@@ -60,10 +60,10 @@
                                 <td>{{customers.Country}}</td>
                                 <td>{{customers.Phone}}</td>
                                 <td>{{customers.Fax}}</td>
-                                
+                                <td>
                                 <div class="btn-group" role="group">
-                                    <button class="btn btn-secondary" title="Editar" @click="btnEditar(customers.CustomersID, customers.CompanyName, customers.ContactName, customers.ContactTitle, customers.Address, customers.City, customers.Region, customers.PostalCode, customers.Country, customers.Phone, customers.Fax)"><i class="fas fa-pencil-alt"></i></button>    
-                                    <button class="btn btn-danger" title="Eliminar" @click="btnBorrar(customers.CustomersID)"><i class="fas fa-trash-alt"></i></button>      
+                                    <button class="btn btn-secondary" title="Editar" @click="btnEditar(customers.CustomerID, customers.CompanyName, customers.ContactName, customers.ContactTitle, customers.Address, customers.City, customers.Region, customers.PostalCode, customers.Country, customers.Phone, customers.Fax)"><i class="fas fa-pencil-alt"></i></button>    
+                                    <button class="btn btn-danger" title="Eliminar" @click="btnBorrar(customers.CustomerID)"><i class="fas fa-trash-alt"></i></button>      
 								</div>
                                 </td>
                             </tr>    
@@ -84,7 +84,7 @@
     <!--Sweet Alert 2 -->        
     <script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>      
     <!--Código custom -->          
-    <script src="maincustom.js"></script>      
+    <script src="../Proyecto-German-/js/maincustom.js"></script>      
     
     </body>
 </html>
