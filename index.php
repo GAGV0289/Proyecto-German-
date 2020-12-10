@@ -16,7 +16,7 @@
     </head>
     <body>
     <header>
-        <h2 class="text-center text-dark"><span class="badge badge-success">CRUD con VUE.JS</span></h2>
+        <h2 class="text-center text-dark"><span class="badge badge-success">CRUD de la tabla categories</span></h2>
     </header>    
     
      <div id="appCategories">               
@@ -34,17 +34,18 @@
                             <tr class="bg-primary text-light">
                                 <th>CategoryID</th>                                    
                                 <th>CategoryName</th>
+                                <th>Description</th>
                             </tr>    
                         </thead>
                         <tbody>
                             <tr v-for="(categories,indice) of categories">                                
                                 <td>{{categories.CategoryID}}</td>                                
                                 <td>{{categories.CategoryName}}</td>
-                                
+                                <td>{{categories.Description}}</td>
                                
                                 <td>
                                 <div class="btn-group" role="group">
-                                    <button class="btn btn-secondary" title="Editar" @click="btnEditar(categories.CategoryID, categories.CategoryName )"><i class="fas fa-pencil-alt"></i></button>    
+                                    <button class="btn btn-secondary" title="Editar" @click="btnEditar(categories.CategoryID, categories.CategoryName, categories.Description )"><i class="fas fa-pencil-alt"></i></button>    
                                     <button class="btn btn-danger" title="Eliminar" @click="btnBorrar(categories.CategoryID)"><i class="fas fa-trash-alt"></i></button>      
 								</div>
                                 </td>
