@@ -5,7 +5,8 @@ el: "#appCategories",
 data:{     
      categories:[],          
      CategoryName:"",
-          
+     Description:"",
+           
  },    
 methods:{  
     //BOTONES        
@@ -13,7 +14,7 @@ methods:{
         const {value: formValues} = await Swal.fire({
         title: 'NUEVO',
         html:
-        '<div class="row"><label class="col-sm-3 col-form-label">CategoryName</label><div class="col-sm-7"><input id="CategoryName" type="text" class="form-control"></div></div>',              
+        '<div class="row"><label class="col-sm-3 col-form-label">CategoryName</label><div class="col-sm-7"><input id="CategoryName" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">Description</label><div class="col-sm-7"><input id="Description" type="text" class="form-control"></div></div>',              
         focusConfirm: false,
         showCancelButton: true,
         confirmButtonText: 'Guardar',          
@@ -22,11 +23,12 @@ methods:{
         preConfirm: () => {            
             return [
               this.CategoryName = document.getElementById('CategoryName').value,
-                                 
+              this.Description = document.getElementById('Description').value
+                                
             ]
           }
         })        
-        if(this.CategoryName == "" ){
+        if(this.CategoryName== "" || this.Description == "" ){
                 Swal.fire({
                   type: 'info',
                   title: 'Datos incompletos',                                    
@@ -46,19 +48,20 @@ methods:{
             })                
         }
     },           
-    btnEditar:async function(CategoryID, CategoryName){                            
+    btnEditar:async function(CategoryID, CategoryName, Description){                            
         await Swal.fire({
         title: 'EDITAR',
         html:
-        '<div class="form-group"><div class="row"><label class="col-sm-3 col-form-label">CategoryName</label><div class="col-sm-7"><input id="CategoryName" value="'+CategoryName+'" type="text" class="form-control"></div></div></div>', 
+        '<div class="form-group"><div class="row"><label class="col-sm-3 col-form-label">CategoryName</label><div class="col-sm-7"><input id="CategoryName" value="'+CategoryName+'" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">Description</label><div class="col-sm-7"><input id="Description" value="'+Description+'" type="text" class="form-control"></div></div>', 
         focusConfirm: false,
         showCancelButton: true,                         
         }).then((result) => {
           if (result.value) {                                             
             CategoryName = document.getElementById('CategoryName').value,    
-                              
+            Description = document.getElementById('Description').value,
+                                
             
-            this.editarCategory(CategoryID,CategoryName);
+            this.editarCategory(CategoryID,CategoryName,Description);
             Swal.fire(
               '¡Actualizado!',
               'El registro ha sido actualizado.',
@@ -97,15 +100,16 @@ methods:{
     },    
     //Procedimiento CREAR.
     altaCategory:function(){
-        axios.post(url, {opcion:1, CategoryName:this.CategoryName }).then(response =>{
+        axios.post(url, {opcion:1, CategoryName:this.CategoryName, Description:this.Description }).then(response =>{
             this.listarCategories();
         });        
-         this.CategoryName = ""
+         this.CategoryName = "",
+         this.Description = ""
          
     },               
     //Procedimiento EDITAR.
-    editarCategory:function(CategoryID,CategoryName){       
-       axios.post(url, {opcion:2, CategoryID:CategoryID, CategoryName:CategoryName }).then(response =>{           
+    editarCategory:function(CategoryID,CategoryName,Description){       
+       axios.post(url, {opcion:2, CategoryID:CategoryID, Description:Description, }).then(response =>{           
            this.listarCategories();           
         });                              
     },    
