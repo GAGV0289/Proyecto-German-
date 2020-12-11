@@ -34,3 +34,63 @@ body
 {
   color: #000;
 }
+.Valor1
+{
+  background: #24303c;
+  color: white;
+  padding: .5rem;
+  margin: .2rem 0;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #1f53c5;
+  transition: all .5s;
+  margin-left: 10px;
+}
+.btn
+{
+  display: flex;
+  justify-content: space-around;
+}
+#submit
+{
+  width: 80px;
+  border-bottom: none;
+  background-color: #31B1E5;
+  color: white; 
+  border-radius:10px;
+  outline:none;
+  border: 0;
+  cursor: pointer;
+  margin-left: 10px;
+}
+#submit:hover
+{
+  background-color: #FA9535;
+}
+.reporte1
+{
+  color: red;
+  font-weight: bold;
+}
+.parrafo
+{
+  margin-left: 124px;
+  font-weight: bold;
+  color: blue;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #66d9ff;
+  color: white;
+}
