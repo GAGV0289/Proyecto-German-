@@ -16,7 +16,11 @@
     </head>
     <body>
     <header>
+<<<<<<< HEAD
+        <h2 class="text-center text-dark"><span class="badge badge-success">CRUD con VUE.JS</span></h2>
+=======
         <h2 class="text-center text-dark"><span class="badge badge-success">CRUD de la tabla categories</span></h2>
+>>>>>>> 854ec2b3df6fdb9585021b80e6bb52234580a80b
     </header>    
     
      <div id="appCategories">               
@@ -34,18 +38,29 @@
                             <tr class="bg-primary text-light">
                                 <th>CategoryID</th>                                    
                                 <th>CategoryName</th>
+<<<<<<< HEAD
+=======
                                 <th>Description</th>
+>>>>>>> 854ec2b3df6fdb9585021b80e6bb52234580a80b
                             </tr>    
                         </thead>
                         <tbody>
                             <tr v-for="(categories,indice) of categories">                                
                                 <td>{{categories.CategoryID}}</td>                                
                                 <td>{{categories.CategoryName}}</td>
+<<<<<<< HEAD
+                                
+                               
+                                <td>
+                                <div class="btn-group" role="group">
+                                    <button class="btn btn-secondary" title="Editar" @click="btnEditar(categories.CategoryID, categories.CategoryName )"><i class="fas fa-pencil-alt"></i></button>    
+=======
                                 <td>{{categories.Description}}</td>
                                
                                 <td>
                                 <div class="btn-group" role="group">
                                     <button class="btn btn-secondary" title="Editar" @click="btnEditar(categories.CategoryID, categories.CategoryName, categories.Description )"><i class="fas fa-pencil-alt"></i></button>    
+>>>>>>> 854ec2b3df6fdb9585021b80e6bb52234580a80b
                                     <button class="btn btn-danger" title="Eliminar" @click="btnBorrar(categories.CategoryID)"><i class="fas fa-trash-alt"></i></button>      
 								</div>
                                 </td>
