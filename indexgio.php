@@ -29,7 +29,7 @@
                     <table class="table table-striped">
                         <thead>
                             <tr class="bg-white text-danger">
-                                <th>ProductID</th>                                    
+                                <th>ProductID</th>                       
                                 <th>ProductName</th>
                                 <th>SupplierID</th>
                                 <th>CategoryID</th>    

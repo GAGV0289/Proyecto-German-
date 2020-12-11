@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
     <link rel="stylesheet" href="../Proyecto-German-/bootstrap/css/bootstrap.min.css">   
     <link rel="stylesheet" href="../Proyecto-German-/plugins/sweetalert2/sweetalert2.min.css">        
-    <link rel="stylesheet" href="../Proyecto-German-/css/.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body style="background-color:#939292;">
