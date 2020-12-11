@@ -8,27 +8,27 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
     <link rel="stylesheet" href="../Proyecto-German-/bootstrap/css/bootstrap.min.css">   
     <link rel="stylesheet" href="../Proyecto-German-/plugins/sweetalert2/sweetalert2.min.css">        
-    <link rel="stylesheet" href="../Proyecto-German-/css/maingio.css">
+    <link rel="stylesheet" href="../Proyecto-German-/css/.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
-<body>
+<body style="background-color:#939292;">
     
     <header>
-        <h2 class="text-center bg-light text-danger"><span>Tabla de Empleados</span></h2>
+        <h2 class="text-center bg-dark text-white"><span>Tabla de Empleados</span></h2>
     </header>    
     
      <div id="Productos">               
         <div class="container"> 
          <div class="row">       
                 <div class="col">        
-                    <button @click="btnNuevo" class="btn btn-danger" title="Nuevo"><i class="fas fa-plus-circle fa-2x"></i></button>
+                    <button @click="btnNuevo" class="btn btn-black" title="Nuevo"><i class="fas fa-plus-circle fa-2x"></i></button>
                 </div>  
             </div>                                      
             <div class="row mt-5">
                 <div class="col-lg-12">                   
                     <table class="table table-striped">
                         <thead>
-                            <tr class="bg-white text-danger">
+                            <tr class="bg-white text-black">
                                 <th>Employee ID</th>
                                 <th>Last name</th>
                                 <th>first name</th>
@@ -44,7 +44,7 @@
                                 <th>Home phone</th>
                                 <th>extencion</th>
                                 <th>repots to</th>
-                                <th>Acciones</th>
+                                <th>Configurar</th>
                             </tr>    
                         </thead>
                         <tbody>
@@ -90,6 +90,6 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>                
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.2/axios.js"></script>         
 <script src="../Proyecto-German-/plugins/sweetalert2/sweetalert2.all.min.js"></script>              
-<script src="../Proyecto-German-/js/maingio.js"></script>
+<script src="../Proyecto-German-/js/mainvgg.js"></script>
 </body>
 </html>
