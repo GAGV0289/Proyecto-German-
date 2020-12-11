@@ -21,6 +21,7 @@ $conexion = $objeto->Conectar();
 			            <input type="number" min="1" max="12" class="Valor1" name="n2" placeholder="MES" onkeypress="return nada(event)" required>
 			      		<br>
 			            <button type="submit" id="submit" class="btn btn-primary">Buscar</button>
+			            <a href="../index.html" id="submit" class="btn btn-primary">Regresar</a>
 				</form><br>
 			<table class="col-md-12">
 				<tr class="bg-primary">
@@ -36,17 +37,18 @@ $conexion = $objeto->Conectar();
 
 				$Valor1 =  (isset($_POST['n1'])) ? $_POST['n1'] : '';
 				$Valor2 =  (isset($_POST['n2'])) ? $_POST['n2'] : '';
+
 				$query="SELECT e.employeeid, e.title, concat(e.firstname,'',e.lastname) as Nombre, e.country,
 							(
 								SELECT count(*) FROM orders o where o.employeeid=e.employeeid
-								and year(o.orderdate)='{$Valor1}' and month(o.orderdate)='{$Valor2}'
+								and year(o.orderdate)='$Valor1' and month(o.orderdate)='$Valor2'
 
 							) as Ordenes,
 							(
 								SELECT round( sum(od.quantity*od.unitprice - od.quantity*od.unitprice*od.Discount), 2)
 								FROM `order details` od join orders o
 								on o.orderid=od.orderid where o.EmployeeID=e.employeeid
-								and year(o.orderdate)='{$Valor1}' and month(o.orderdate)='{$Valor2}'
+								and year(o.orderdate)='$Valor1' and month(o.orderdate)='$Valor2'
 
 							) as Monto
 						FROM employees e

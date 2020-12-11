@@ -28,7 +28,10 @@ $conexion = $objeto->Conectar();
 			            <input type="number" min="1" max="12" class="Valor1" name="n5" placeholder="MES" onkeypress="return nada(event)" required>
 			            <input type="number" min="1" max="31" class="Valor1" name="n6" placeholder="DÍA" onkeypress="return nada(event)" required>
 			      		<br>
+			      		 <input type="number" min="1" max="10" class="Valor1" name="n7" placeholder="ID" onkeypress="return nada(event)" required>
+			      		 <br>
 			            <button type="submit" id="submit" class="btn btn-primary">Buscar</button>
+			            <a href="../index.html" id="submit" class="btn btn-primary">Regresar</a>
 				</form><br>
 			<table class="col-md-12">
 				<tr class="bg-primary">
@@ -49,6 +52,7 @@ $conexion = $objeto->Conectar();
 				$Valor4 =  (isset($_POST['n4'])) ? $_POST['n4'] : '';
 				$Valor5 =  (isset($_POST['n5'])) ? $_POST['n5'] : '';
 				$Valor6 =  (isset($_POST['n6'])) ? $_POST['n6'] : '';
+				$Valor7 =  (isset($_POST['n7'])) ? $_POST['n7'] : '';
 
 				$query="SELECT p.productid, p.productname, p.unitprice, p.unitsinstock, c.CategoryName,
 						(
@@ -63,7 +67,7 @@ $conexion = $objeto->Conectar();
 						    and o.OrderDate between '$Valor1.$Valor2.$Valor3' and '$Valor4.$Valor5.$Valor6'
 						) as Monto
 						FROM products p join categories c on p.CategoryID=c.CategoryID
-						where c.CategoryID=7
+						where c.CategoryID='$Valor7'
 						order by cantidad desc";
 
 				$consulta=$conexion->query($query);
